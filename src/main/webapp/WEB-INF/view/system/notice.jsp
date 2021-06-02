@@ -89,6 +89,7 @@
     $('#write_modal_button').click(function() {
       var identifier = 'w';
       fadeInModal(identifier);
+      console.log('//')
     });
 
     /* 공지사항 작성 버튼 이벤트 */
@@ -565,7 +566,6 @@
       // 수정은 단건 조회에서 불러온 데이터를 그대로 가지고
       // 모달만 변경시키면 된다.
       // 추가:글자수 카운팅 설정
-      console.log('이건호출..?',identifier)
       swapModal(identifier);
       initModal(identifier);
       var count = $('#notice_content').val().length;
@@ -609,7 +609,6 @@
       } 
     }
     else if (identifier == 'm') { // 수정모달
-      console.log('수정모달호출')
       $('#upload_modify_file').val('');
       $('#download_file').hide();
     }
@@ -771,9 +770,9 @@
                   <input id="file_name" value="" readonly>
                 </td>
                 <td style="border-left: none;">
-                  <a class="btn" id="download" href="" download>
-                    <button class="btn-default btn-sm">다운로드</button>
-                  </a>
+                   <a class="btn" id="download" href="" download>
+                     <button type="button" class="btn-default btn-sm">다운로드</button>
+                   </a>
                 </td>
               <tr>
               <tr id="modify_file">
@@ -794,9 +793,9 @@
                 <td colspan="3" style="position:absolute; top:100%; left:35%; border-right:none;border-left:none">
                   <c:if test="${sessionScope.userType == 'E'}">
                     <div class="btn-group">
-                      <button class="btn-default btn-sm" id="write_button">저장</button>
+                      <button type="button" class="btn-default btn-sm" id="write_button">저장</button>
                       <button class="btn-default btn-sm" id="modify_button">저장</button>
-                      <button class="btn-default btn-sm" id="modify_modal_button">수정</button>
+                      <button class="btn-default btn-sm" id="modify_modal_button" type="button">수정</button>
                       <button class="btn-default btn-sm" id="delete_button">삭제</button>
                       <button class="btn-default btn-sm" id="close_button">취소</button>
                     </div>
