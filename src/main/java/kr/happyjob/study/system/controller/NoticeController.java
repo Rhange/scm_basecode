@@ -227,7 +227,6 @@ public class NoticeController {
       // DB에서 파일 삭제
       int deleteResult = noticeService.deleteFile(file_no);
       
-      
       // 물리경로에서 파일 삭제
       fileUtil.deleteFiles(param);
       if(deleteResult == 1) {

@@ -538,8 +538,7 @@
           swal('서버에서 에러가 발생했습니다');
         }
       }
-      ;
-
+      
       callAjax("/system/deleteNotice.do", "post", "text", true, param, resultCallback);
     } else {
       return false;
