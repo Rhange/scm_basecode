@@ -434,6 +434,7 @@
 
       if (!file) {
         $('#delete_file_button').hide();
+        $('#modify_file').val('');
       }
     }
   }
